@@ -1,23 +1,23 @@
 ## Objectives
-* Create a fully functional CRUD API using knex query builder
+* Create a fully functional CRUD API using MongoDB and Mongoose
 
 ## Getting started
 ```
-npm i --save knex pg
-touch knexfile.js
-mkdir db
-mkdir db/seeds
-mkdir db/migrations
+# prevent any permissions issues    
+sudo mkdir /usr/local/Frameworks
+sudo chown $(whoami):admin /usr/local/Frameworks
 
-// create db in postico
-// update conn string in knexfile.js
-// create migration files
-// create seed files
+brew install mongodb
+# to store mongo data
+mkdir -p /data/db 
+# start mongodb server on system startup
+brew services start mongodb
 
-knex migrate:latest && knex seed:run
+npm i --save mongoose
 
 ```
 
 ## Resources
-https://devhints.io/knex
-https://express-validator.github.io/docs/
+https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
+https://mongoosejs.com/docs/index.html
+https://stackoverflow.com/questions/9269040/which-http-response-code-for-this-email-is-already-registered/32531069
